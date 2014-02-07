@@ -2,15 +2,15 @@
 
 
 // Declare app level module which depends on filters, and services
-angular.module('myApp', [
+angular.module('oatmail', [
   'ngRoute',
-  'myApp.filters',
-  'myApp.services',
-  'myApp.directives',
-  'myApp.controllers'
+  'oatmail.filters',
+  'oatmail.services',
+  'oatmail.directives',
+  'oatmail.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
-  $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
+  $routeProvider.when('/view1', {templateUrl: 'partials/head.html', controller: 'MyCtrl1'});
+  $routeProvider.when('/view2', {templateUrl: 'partials/sidebar.html', controller: 'MyCtrl2'});
   $routeProvider.otherwise({redirectTo: '/view1'});
 }]);

@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', []).
+angular.module('oatmail.controllers', []).
   controller('MyCtrl1', [function() {
 
   }])
