@@ -16,7 +16,7 @@
   	<div class="container-full">
       <div ng-controller="HeaderCtrl" ng-include src="'partials/header.html'"></div>
   	  <div class="row">
-  	  	<div class="col-xs-0 col-sm-3 col-md-2" ng-include src="'partials/sidebar.html'"></div>
+  	  	<div class="hidden-xs col-sm-3 col-md-2" ng-include src="'partials/sidebar.html'"></div>
   	  	<div class="col-xs-12 col-sm-9 col-md-10" ng-include src="'partials/mailbox.html'"></div>
   	  </div>
 
@@ -32,5 +32,8 @@
     <script src="js/controllers.js"></script>
     <script src="js/filters.js"></script>
     <script src="js/directives.js"></script>	
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>    
+    <script src="js/bootstrap.min.js"></script>	
   </body>
 </html>

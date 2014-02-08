@@ -12,27 +12,31 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li><a href="#">+ New</a></li>
+      <li><a href="#">Compose <span class="glyphicon glyphicon-plus"></span></a></li>
     </ul>
     <form class="navbar-form navbar-left" role="search">
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Search">
       </div>
+      <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
     </form>
     <ul class="nav navbar-nav">
-      <li><a href="#"id="header-sort">Sort</a></li>
+      <li><a href="#"id="header-sort"><span class="glyphicon glyphicon-sort"></span></a></li>
     </ul>
     <ul class="nav navbar-nav" id="checked-actions">
-      <li><a href="#" id="header-delete">Delete</a></li>
-      <li><a href="#" id="header-markRead">Mark as Read</a></li>
-      <li><a href="#" id="header-tag">Tag</a></li>
+      <li><a href="#" id="header-delete"><span class="glyphicon glyphicon-trash"></span></a></li>
+      <li><a href="#" id="header-markRead"><span class="glyphicon glyphicon-check"></span></a></li>
+      <li><a href="#" id="header-tag"><span class="glyphicon glyphicon-tag"></span></a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="#" id="refresh"><span class="glyphicon glyphicon-refresh"></span></a></li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">             
       <li class="dropdown">              
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ emailAddress }}</a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">paul@oatmail.io <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a href="{{entity}}">{{entity}}</a></li>
+          <li><a href="entity">entity</a></li>
           <li class="divider"></li>
           <li><a href="/changeEntity">Change Tent Entity</a></li>
           <li><a href="/registration">Change Email address</a></li>
