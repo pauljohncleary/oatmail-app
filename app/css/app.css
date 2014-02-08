@@ -1,4 +1,14 @@
-/* app css stylesheet */
+/* Oatmail CSS */
+.container {
+   padding: 0 15px;  
+}
+
+body {
+  padding-top: 55px;
+}
+
+
+/* app css stylesheet (FROM EXAMPLE ANGULAR PROJECT */
 
 .menu {
   list-style: none;

@@ -3,7 +3,7 @@
 /* Controllers */
 
 angular.module('oatmail.controllers', []).
-  controller('MyCtrl1', [function() {
+  controller('HeaderCtrl', [function($scope) {
 
   }])
   .controller('MyCtrl2', [function() {
