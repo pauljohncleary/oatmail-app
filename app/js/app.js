@@ -1,7 +1,7 @@
 'use strict';
 
 
-// Declare app level module which depends on filters, and services
+// Declare app level module and routes
 angular.module('oatmail', [
   'ngRoute',
   'oatmail.filters',
@@ -11,10 +11,10 @@ angular.module('oatmail', [
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {templateUrl: 'partials/mailbox.html', controller: 'MailAreaCtrl'});
-  $routeProvider.when('/view/:id', {templateUrl: 'partials/view.html', controller: 'ViewCtrl'});  
+  $routeProvider.when('/view/:emailId', {templateUrl: 'partials/view.html', controller: 'ViewCtrl'});  
   $routeProvider.when('/compose', {templateUrl: 'partials/compose.html', controller: 'ComposeCtrl'});
-  $routeProvider.when('/forward/:id', {templateUrl: 'partials/compose.html', controller: 'ComposeCtrl'});
-  $routeProvider.when('/reply/:id', {templateUrl: 'partials/compose.html', controller: 'ComposeCtrl'});  
-  $routeProvider.when('/replyAll/:id', {templateUrl: 'partials/compose.html', controller: 'ComposeCtrl'});    
+  $routeProvider.when('/forward/:emailId', {templateUrl: 'partials/compose.html', controller: 'ForwardCtrl'});
+  $routeProvider.when('/reply/:emailId', {templateUrl: 'partials/compose.html', controller: 'ReplyCtrl'});  
+  $routeProvider.when('/replyall/:emailId', {templateUrl: 'partials/compose.html', controller: 'ReplyAllCtrl'});    
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
