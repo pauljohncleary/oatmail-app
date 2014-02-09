@@ -10,7 +10,11 @@ angular.module('oatmail', [
   'oatmail.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {templateUrl: 'partials/head.html', controller: 'MyCtrl1'});
-  $routeProvider.when('/view2', {templateUrl: 'partials/sidebar.html', controller: 'MyCtrl2'});
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.when('/', {templateUrl: 'partials/mailbox.html', controller: 'MailAreaCtrl'});
+  $routeProvider.when('/view/:id', {templateUrl: 'partials/view.html', controller: 'ViewCtrl'});  
+  $routeProvider.when('/compose', {templateUrl: 'partials/compose.html', controller: 'ComposeCtrl'});
+  $routeProvider.when('/forward/:id', {templateUrl: 'partials/compose.html', controller: 'ComposeCtrl'});
+  $routeProvider.when('/reply/:id', {templateUrl: 'partials/compose.html', controller: 'ComposeCtrl'});  
+  $routeProvider.when('/replyAll/:id', {templateUrl: 'partials/compose.html', controller: 'ComposeCtrl'});    
+  $routeProvider.otherwise({redirectTo: '/'});
 }]);
